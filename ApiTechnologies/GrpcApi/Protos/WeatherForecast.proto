@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcApi";
+
+package WeatherForecast;
+
+import "google/protobuf/wrappers.proto";
+import "google/type/date.proto";
+import "google/protobuf/empty.proto";
+
+
+// The greeting service definition.
+service WeatherForecastApi {
+  // Sends a greeting
+  rpc GetRandomForecasts (google.protobuf.Empty) returns (stream WeatherForecastApiModel);
+}
+
+
+
+message WeatherForecastApiModel {
+    google.type.Date date                 = 1;
+    int32 temperature_c                   = 2;
+    int32 temperature_f                   = 3;
+    google.protobuf.StringValue summary   = 4;
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrpcApiJsonTranscoding</name>
+    </assembly>
+    <members>
+        <member name="T:GrpcApi.WeatherForecastReflection">
+            <summary>Holder for reflection information generated from Protos/WeatherForecast.proto</summary>
+        </member>
+        <member name="P:GrpcApi.WeatherForecastReflection.Descriptor">
+            <summary>File descriptor for Protos/WeatherForecast.proto</summary>
+        </member>
+        <member name="T:GrpcApi.WeatherForecastApiModel">
+            <summary>
+            the api model
+            </summary>
+        </member>
+        <member name="F:GrpcApi.WeatherForecastApiModel.DateFieldNumber">
+            <summary>Field number for the "date" field.</summary>
+        </member>
+        <member name="P:GrpcApi.WeatherForecastApiModel.Date">
+            <summary>
+            the date of this forecast
+            </summary>
+        </member>
+        <member name="F:GrpcApi.WeatherForecastApiModel.TemperatureCFieldNumber">
+            <summary>Field number for the "temperature_c" field.</summary>
+        </member>
+        <member name="P:GrpcApi.WeatherForecastApiModel.TemperatureC">
+            <summary>
+            temperature in Celsius
+            </summary>
+        </member>
+        <member name="F:GrpcApi.WeatherForecastApiModel.TemperatureFFieldNumber">
+            <summary>Field number for the "temperature_f" field.</summary>
+        </member>
+        <member name="P:GrpcApi.WeatherForecastApiModel.TemperatureF">
+            <summary>
+            temperature in fahrenheit
+            </summary>
+        </member>
+        <member name="F:GrpcApi.WeatherForecastApiModel.SummaryFieldNumber">
+            <summary>Field number for the "summary" field.</summary>
+        </member>
+        <member name="P:GrpcApi.WeatherForecastApiModel.Summary">
+            <summary>
+            summary in words
+            </summary>
+        </member>
+        <member name="T:GrpcApi.WeatherForecastApi">
+            <summary>
+            The weatherForecast service definition.
+            </summary>
+        </member>
+        <member name="P:GrpcApi.WeatherForecastApi.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:GrpcApi.WeatherForecastApi.WeatherForecastApiBase">
+            <summary>Base class for server-side implementations of WeatherForecastApi</summary>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.WeatherForecastApiBase.GetRandomForecasts(Google.Protobuf.WellKnownTypes.Empty,Grpc.Core.IServerStreamWriter{GrpcApi.WeatherForecastApiModel},Grpc.Core.ServerCallContext)">
+            <summary>
+            Returns forecasts
+            </summary>
+            <param name="request">The request received from the client.</param>
+            <param name="responseStream">Used for sending responses back to the client.</param>
+            <param name="context">The context of the server-side call handler being invoked.</param>
+            <returns>A task indicating completion of the handler.</returns>
+        </member>
+        <member name="T:GrpcApi.WeatherForecastApi.WeatherForecastApiClient">
+            <summary>Client for WeatherForecastApi</summary>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.WeatherForecastApiClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for WeatherForecastApi</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.WeatherForecastApiClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for WeatherForecastApi that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.WeatherForecastApiClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.WeatherForecastApiClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.WeatherForecastApiClient.GetRandomForecasts(Google.Protobuf.WellKnownTypes.Empty,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Returns forecasts
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.WeatherForecastApiClient.GetRandomForecasts(Google.Protobuf.WellKnownTypes.Empty,Grpc.Core.CallOptions)">
+            <summary>
+            Returns forecasts
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.WeatherForecastApiClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.BindService(GrpcApi.WeatherForecastApi.WeatherForecastApiBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:GrpcApi.WeatherForecastApi.BindService(Grpc.Core.ServiceBinderBase,GrpcApi.WeatherForecastApi.WeatherForecastApiBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+    </members>
+</doc>
