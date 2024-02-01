@@ -140,6 +140,9 @@ The code is on github
 
 ![qrcode w:250](qr-code.png)
 
+[Slack Invite](https://join.slack.com/t/digitaleinitiativen/shared_invite/zt-u5baf84j-y4O09npXgVXwP45QYOmQ5g)
+
+
 
 <!-- _footer: "Backgroundimage by coolvector on Freepik" -->
 <!-- link to background image https://www.freepik.com/free-vector/gradient-hexagonal-background_13955213.htm#query=svg%20background&position=3&from_view=keyword&track=ais&uuid=cd1420f3-a9b1-466b-80cd-7712f43308a7 -->
